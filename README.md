@@ -11,10 +11,12 @@ This project has been setted with the following technologies:
 - [WebPack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
 - [Styled-components](https://www.styled-components.com/)
+- [ESLint](https://eslint.org/)
+- [EditorConfig](https://editorconfig.org/)
 
 ## 💻 Project
 
-React e-commerce application based on "Buscapé" web site, using React library, Create React App tool to configure the environment, TypeScript as the language to ensure values from props and state as the expected from contract, Styled components to avoid unnecessary style to components and conflicting ones and Atom model as the design pattern to promote clean maintenance and good practice of coding.
+React e-commerce application based on "Buscapé" web site, using React library, Create React App tool to configure the environment, TypeScript as the language to ensure values from props and state as the expected from contract, Styled components to avoid unnecessary style to components and conflicting ones and Atom model as the design pattern to promote clean maintenance and good practice of coding in accordance with ESLint and EditorConfig, configuration modules which automatically update the code to a pattern clean code.
 
 ## 🚀 How to run
 
