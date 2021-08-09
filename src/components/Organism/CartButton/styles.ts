@@ -6,8 +6,4 @@ export const CartButtonContainer = styled.button`
 
   border: 0;
   background: transparent;
-
-  .navigation-bar{
-    display: none;
-  }
 `;

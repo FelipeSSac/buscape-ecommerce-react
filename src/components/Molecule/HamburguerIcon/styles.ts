@@ -26,8 +26,6 @@ export const HamburguerIconContainer = styled.div`
     background: #D8262D;
     color: #fff;
     font-weight: 700;
-    overflow: hidden;
-    word-wrap: break-word;
   }
 
   .empty-cart{
@@ -43,15 +41,15 @@ export const HamburguerIconContainer = styled.div`
     transition: all 0.2s ease-in-out;
   }
 
-  .hide--icon-line-1{
+  .show--icon-line-1{
     transform: translate(0, 12px) rotateZ(-45deg);
   }
 
-  .hide--icon-line-2{
+  .show--icon-line-2{
     opacity: 0;
   }
 
-  .hide--icon-line-3{
+  .show--icon-line-3{
     transform: translate(0, -12px) rotateZ(45deg);
   }
 `;

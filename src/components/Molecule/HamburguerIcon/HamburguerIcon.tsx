@@ -1,16 +1,16 @@
 import { HamburguerIconContainer } from './styles';
 
-interface IHamburguerIconProps { hide?: boolean, cartItemsCount?:number }
+interface IHamburguerIconProps { show?: boolean, cartItemsCount?:number }
 
-export default function HamburguerIcon({ hide, cartItemsCount }: IHamburguerIconProps) {
+export default function HamburguerIcon({ show, cartItemsCount }: IHamburguerIconProps) {
   return (
     <HamburguerIconContainer>
       <span className={`items-count-indicator${!cartItemsCount ? ' empty-cart' : ''}`}>{cartItemsCount}</span>
-      <span className={`icon-line${hide ? ' hide--icon-line-1' : ''}`} />
-      <span className={`icon-line${hide ? ' hide--icon-line-2' : ''}`} />
-      <span className={`icon-line${hide ? ' hide--icon-line-3' : ''}`} />
+      <span className={`icon-line${show ? ' show--icon-line-1' : ''}`} />
+      <span className={`icon-line${show ? ' show--icon-line-2' : ''}`} />
+      <span className={`icon-line${show ? ' show--icon-line-3' : ''}`} />
     </HamburguerIconContainer>
   );
 }
 
-HamburguerIcon.defaultProps = { hide: false, cartItemsCount: null };
+HamburguerIcon.defaultProps = { show: false, cartItemsCount: null };
