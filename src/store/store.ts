@@ -22,7 +22,9 @@ const reducer = (state = initialState, action:IAction) => {
       });
     }
     case 'removeFromCart': {
-      const nextStateCartItems = state.cartItems.filter((item) => item !== action.selectedItem);
+      const nextStateCartItems = state.cartItems.filter((item) => (
+        item !== action.selectedItem
+      ));
       return ({
         ...state,
         cartItems: [...nextStateCartItems],

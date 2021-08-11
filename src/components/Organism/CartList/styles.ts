@@ -2,22 +2,23 @@ import styled from 'styled-components';
 
 export const CartListContainter = styled.div`
   width: 100%;
-  height: 50rem;
+  height: 0;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   opacity: 0;
-  visibility: hidden;
   position: absolute;
 
   background-color: #DBB000;
-  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out;
 
   &.show-list{
+    height: 50rem;
+    position: fixed;
+
     opacity: 1;
-    visibility: visible;
   }
 
   .cart-list--items{

@@ -1,6 +1,8 @@
+import { ICartItem } from './state';
+
 export interface IAction {
   type: string;
-  selectedItem: string;
+  selectedItem: ICartItem;
 }
 
 export const ActionTypes = {

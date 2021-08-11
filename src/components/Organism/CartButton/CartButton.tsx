@@ -18,10 +18,8 @@ export default function CartButton() {
   };
 
   return (
-    <>
-      <CartButtonContainer onClick={handleShowMenu}>
-        <HamburguerIcon cartItemsCount={cartItemsCounter} show={showList} />
-      </CartButtonContainer>
-    </>
+    <CartButtonContainer onClick={handleShowMenu}>
+      <HamburguerIcon cartItemsCount={cartItemsCounter} show={showList} />
+    </CartButtonContainer>
   );
 }
