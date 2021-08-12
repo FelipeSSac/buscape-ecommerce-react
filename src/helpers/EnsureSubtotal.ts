@@ -1,5 +1,5 @@
-import { ICartItem } from '../../store';
-import { EnsureCurrency } from '../EnsureCurrency';
+import { ICartItem } from '../store';
+import { EnsureCurrency } from '.';
 
 export default function EnsureSubtotal(items: Array<ICartItem>) {
   const itemsArrayValue = items.map((item) => item.price.value);

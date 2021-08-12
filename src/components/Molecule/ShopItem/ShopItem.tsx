@@ -1,13 +1,13 @@
 import { useDispatch } from 'react-redux';
 import { ActionTypes } from '../../../store';
 
-import { EnsureCurrency } from '../../../helpers/EnsureCurrency';
+import { EnsureCurrency } from '../../../helpers';
 
 import { ShopItemContainer } from './styles';
-import { IItemsType } from '../../../resources/Items/items';
+import { IItems } from '../../../resources/Items/items';
 
 interface IShopItemProps {
-  item: IItemsType;
+  item: IItems;
 }
 
 export default function ShopItem({ item }:IShopItemProps) {
@@ -15,7 +15,7 @@ export default function ShopItem({ item }:IShopItemProps) {
 
   const dispatch = useDispatch();
 
-  const handleCartAddItem = (selectedItem: IItemsType) => {
+  const handleCartAddItem = (selectedItem: IItems) => {
     dispatch({ type: ActionTypes.addOnCart, selectedItem });
   };
 

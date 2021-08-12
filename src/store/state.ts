@@ -4,8 +4,10 @@ export interface ICartItem {
   images: Array<string>;
   quantity: number;
   price: {
+    singleValue: number;
     value: number;
     installments: number;
+    singleInstallmentValue: number;
     installmentValue: number;
   }
 }

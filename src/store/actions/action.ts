@@ -1,4 +1,4 @@
-import { ICartItem } from './state';
+import { ICartItem } from '../state';
 
 export interface IAction {
   type: string;

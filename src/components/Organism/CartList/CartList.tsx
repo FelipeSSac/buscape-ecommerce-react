@@ -1,13 +1,12 @@
 import { useSelector } from 'react-redux';
 import { IState } from '../../../store';
 
-import { ExcludeItemButton } from '../../Molecule/ExcludeItemButton';
+import { CartItem } from '../../Molecule/CartItem';
 
-import { CartListContainer, CartItemContainer } from './styles';
+import { CartListContainer } from './styles';
 import EmptyCart from '../../../assets/images/empty-cart.svg';
 
-import { EnsureCurrency } from '../../../helpers/EnsureCurrency';
-import { EnsureSubtotal } from '../../../helpers/EnsureSubtotal';
+import { EnsureSubtotal } from '../../../helpers';
 
 export default function CartList() {
   const showList = useSelector((store: IState) => store.showCartItemsList);
@@ -33,31 +32,9 @@ export default function CartList() {
         <>
           <section className="cart-list--items">
             {cartListItems.map((item) => (
-              <CartItemContainer key={item.id}>
-                <strong className="cart-item--title">
-                  {item.name}
-                </strong>
-                <img className="cart-item--img" src={item.images[1]} alt={`${item.name}`} />
-                <dd className="cart-item--installments">
-                  {item.price.installments}
-                  x
-                  {' '}
-                  {EnsureCurrency(item.price.installmentValue)}
-                </dd>
-                <dd className="cart-item--value">
-                  ou
-                  {' '}
-                  {EnsureCurrency(item.price.value)}
-                  {' '}
-                  à vista
-                </dd>
-                <dd>
-                  Quantidade:
-                  {' '}
-                  {item.quantity}
-                </dd>
-                <ExcludeItemButton item={item} />
-              </CartItemContainer>
+              <CartItem
+                item={item}
+              />
             ))}
           </section>
           <div className="cart-list--subtotal">

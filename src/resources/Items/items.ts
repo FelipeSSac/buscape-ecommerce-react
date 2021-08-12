@@ -1,4 +1,4 @@
-export interface IItemsType {
+export interface IItems {
   id: number;
   name: string;
   images: Array<string>;
