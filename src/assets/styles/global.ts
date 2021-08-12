@@ -13,10 +13,29 @@ export default createGlobalStyle`
   }
 
   html {
+    min-width: 300px;
     font-size: 16px;
   }
 
   button {
     cursor: pointer;
+  }
+
+  @media (min-width:691px) and (max-width:955px){
+    html{
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width:361px) and (max-width:690px){
+    html{
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width:360px){
+    html{
+      font-size: 10px;
+    }
   }
 `;

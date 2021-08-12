@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const ShopItemContainer = styled.article`
   width: 90%;
+  margin: 0 auto;
   margin-top: 1rem;
-  padding: 3rem;
+  padding: 0 1.5rem;
 
   display: flex;
   justify-content: space-between;
@@ -16,6 +17,7 @@ export const ShopItemContainer = styled.article`
   .shop-item--galery{
     width: 4rem;
     height: 20rem;
+    z-index: 1;
 
     li{
       width: 4rem;
@@ -113,6 +115,7 @@ export const ShopItemContainer = styled.article`
 
     background-color: #11B346;
     font-weight: bold;
+    font-size: 1.1rem;
     border-radius: 0.2rem;
     color: #fff;
     border: 0;
@@ -123,5 +126,27 @@ export const ShopItemContainer = styled.article`
     display: inline;
 
     color: #11B346;
+  }
+
+  @media (min-width:691px) and (max-width:1141px){
+    .shop-item--main-image{
+      width: 17rem;
+    }
+  }
+
+  /* @media (min-width:691px) and (max-width:999px){
+    .shop-item--main-image{
+      width: 14rem;
+    }
+  } */
+
+  @media (max-width:690px){
+    .shop-item--galery{
+      display: none;
+    }
+
+    .shop-item--main-image{
+      width: 12rem;
+    }
   }
 `;

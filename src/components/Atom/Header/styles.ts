@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-  height: 5rem;
-  padding: 0 1.5rem;
+  height: 80px;
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 3;
@@ -11,8 +11,8 @@ export const HeaderContainer = styled.header`
   box-shadow: 0 -15px 20px;
 
   .header--content{
-    width: 100%;
-    max-width: 100rem;
+    width: 90%;
+    max-width: 78rem;
     height: 100%;
     margin: 0 auto;
 
@@ -26,6 +26,6 @@ export const HeaderContainer = styled.header`
   }
 
   .header--drop-down-menu{
-    width: 6rem;
+    width: 48px;
   }
 `;
