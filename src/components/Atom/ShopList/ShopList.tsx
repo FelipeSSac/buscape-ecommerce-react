@@ -10,6 +10,7 @@ export default function ShopList() {
       <SectionShopContainer>
         {data.items.map(({ product }) => (
           <ShopItem
+            key={product.id}
             item={product}
           />
         ))}

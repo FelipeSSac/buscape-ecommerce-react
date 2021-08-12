@@ -23,8 +23,8 @@ export default function ShopItem({ item }:IShopItemProps) {
     <ShopItemContainer>
       <div className="shop-item--galery">
         {images.map((image) => (
-          <li>
-            <img key={`${image}321${name}`} src={image} alt={name} />
+          <li key={image}>
+            <img src={image} alt={name} />
           </li>
         ))}
       </div>

@@ -1,9 +1,13 @@
 import { IState, IAction } from '..';
 
 export default function RemoveFromCart(state:IState, action:IAction) {
-  const find = state.cartItems.find((item) => item.id === action.selectedItem.id);
+  const selectedProduct = state.cartItems.find((item) => item.id === action.selectedItem.id);
 
-  if (!find || find.quantity === 1) {
+  if (!selectedProduct) {
+    return state;
+  }
+
+  if (selectedProduct.quantity === 1) {
     const nextStateCartItems = state.cartItems.filter((item) => (
       item !== action.selectedItem
     ));
@@ -21,10 +25,10 @@ export default function RemoveFromCart(state:IState, action:IAction) {
         const finalQuantity = item.quantity - 1;
 
         const finalValue = parseFloat(
-          (item.price.value * finalQuantity).toFixed(2),
+          (item.price.singleValue * finalQuantity).toFixed(2),
         );
         const finalInstallmentsValue = parseFloat(
-          (item.price.installmentValue * finalQuantity).toFixed(2),
+          (item.price.singleInstallmentValue * finalQuantity).toFixed(2),
         );
 
         return {

@@ -33,6 +33,7 @@ export default function CartList() {
           <section className="cart-list--items">
             {cartListItems.map((item) => (
               <CartItem
+                key={item.id}
                 item={item}
               />
             ))}

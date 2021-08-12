@@ -1,5 +1,7 @@
 <h1 align="center">Buscapé Challenge</h1>
 
+<h1 align="center"><img src="./src/assets/images/preview.gif" /></h1>
+
 ## ✨ Technologies
 
 This project has been setted with the following technologies:
