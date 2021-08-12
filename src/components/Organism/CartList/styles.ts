@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-export const CartListContainter = styled.div`
+export const CartListContainer = styled.div`
   width: 100%;
   height: 0;
+  position: fixed;
+  z-index: 1;
 
   display: flex;
   flex-direction: column;
@@ -19,6 +21,24 @@ export const CartListContainter = styled.div`
     position: fixed;
 
     opacity: 1;
+  }
+
+  .cart-list-empty-container{
+    width: 100%;
+    max-width: 80rem;
+    margin: 10rem auto;
+
+    color: #fff;
+    text-align: center;
+
+    .cart-list-empty-image{
+      height: 4rem;
+    }
+
+    .cart-list-empty-subtitle{
+      margin-top: 2rem;
+      align-items: center;
+    }
   }
 
   .cart-list--items{

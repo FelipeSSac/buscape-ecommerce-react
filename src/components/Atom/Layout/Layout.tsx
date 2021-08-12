@@ -9,7 +9,6 @@ export default function Layout() {
       <Header />
       <CartList />
       <ShopList />
-      <footer>footer</footer>
     </>
   );
 }

@@ -7,6 +7,7 @@ const EnsureCurrency = (value: number) => {
 
     return finalValue;
   }
+
   if (arrayValue[1].length === 1) {
     const finalValue = `R$ ${arrayValue.join(',')}0`;
 

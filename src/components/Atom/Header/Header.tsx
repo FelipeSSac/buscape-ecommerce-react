@@ -7,10 +7,12 @@ import { HeaderContainer } from './styles';
 export default function Header() {
   return (
     <HeaderContainer>
-      <a href="/">
-        <img src={Logo} alt="Buscapé" className="header--logo" />
-      </a>
-      <CartButton />
+      <div className="header--content">
+        <a href="/">
+          <img src={Logo} alt="Buscapé" className="header--logo" />
+        </a>
+        <CartButton />
+      </div>
     </HeaderContainer>
   );
 }

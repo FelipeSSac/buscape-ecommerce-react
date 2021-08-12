@@ -1,44 +1,68 @@
 import { useDispatch } from 'react-redux';
+import { ActionTypes } from '../../../store';
 
-import { ActionTypes, ICartItem } from '../../../store';
+import { EnsureCurrency } from '../../../helpers/EnsureCurrency';
+
+import { ShopItemContainer } from './styles';
+import { IItemsType } from '../../../resources/Items/items';
 
 interface IShopItemProps {
-  name: string;
-  images: string[];
-  value: number;
-  installments: number;
-  installmentValue: number;
-  item: ICartItem;
+  item: IItemsType;
 }
 
-export default function ShopItem({
-  name,
-  images,
-  value,
-  installments,
-  installmentValue,
-  item,
-}: IShopItemProps) {
+export default function ShopItem({ item }:IShopItemProps) {
+  const { name, images, price } = item;
+
   const dispatch = useDispatch();
 
-  const handleCartAddItem = (selectedItem: ICartItem) => {
+  const handleCartAddItem = (selectedItem: IItemsType) => {
     dispatch({ type: ActionTypes.addOnCart, selectedItem });
   };
 
   return (
-    <article>
-      <h1>{name}</h1>
-      <img src={images[1]} alt={name} />
-      <h2>{value}</h2>
-      <h3>{installments}</h3>
-      <h3>{installmentValue}</h3>
-      <button
-        type="button"
-        onClick={() => handleCartAddItem(item)}
-      >
-        Adicionar ao carrinho
-
-      </button>
-    </article>
+    <ShopItemContainer>
+      <div className="shop-item--galery">
+        {images.map((image) => (
+          <li>
+            <img key={`${image}321${name}`} src={image} alt={name} />
+          </li>
+        ))}
+      </div>
+      <img className="shop-item--main-image" src={images[0]} alt={name} />
+      <div className="shop-item--details-container">
+        <h1 className="shop-item--name">{name}</h1>
+        <hr />
+        <h4 className="shop-item--best-price-tag">Melhor preço</h4>
+        <div className="shop-item--installments-container">
+          <h3 className="shop-item--installments">
+            {price.installments}
+            x
+            {' '}
+          </h3>
+          <h3 className="shop-item--installments-value">
+            {EnsureCurrency(price.installmentValue)}
+            {' '}
+          </h3>
+          <button
+            type="button"
+            className="shop-item--button-add"
+            onClick={() => handleCartAddItem(item)}
+          >
+            Adicionar ao carrinho
+          </button>
+        </div>
+        <div>
+          <span>
+            ou
+            {' '}
+          </span>
+          <h4 className="shop-item--value">{EnsureCurrency(price.value)}</h4>
+          <span>
+            {' '}
+            à vista
+          </span>
+        </div>
+      </div>
+    </ShopItemContainer>
   );
 }

@@ -3,20 +3,32 @@ import { IState } from '../../../store';
 
 import { ExcludeItemButton } from '../../Molecule/ExcludeItemButton';
 
-import { CartListContainter, CartItemContainer } from './styles';
+import { CartListContainer, CartItemContainer } from './styles';
+import EmptyCart from '../../../assets/images/empty-cart.svg';
 
 import { EnsureCurrency } from '../../../helpers/EnsureCurrency';
+import { EnsureSubtotal } from '../../../helpers/EnsureSubtotal';
 
 export default function CartList() {
   const showList = useSelector((store: IState) => store.showCartItemsList);
   const cartListItems = useSelector((store: IState) => store.cartItems);
 
+  const { subtotalCurrency, installmentValueCurrency } = EnsureSubtotal(cartListItems);
+
   return (
-    <CartListContainter
+    <CartListContainer
       className={`${showList ? ('show-list') : ('hide-list')}`}
     >
       {cartListItems.length === 0 ? (
-        <div> carrinho vazio</div>
+        <div className="cart-list-empty-container">
+          <h1 className="cart-list-empty-title">
+            Seu carrinho ainda está vazio
+          </h1>
+          <h3 className="cart-list-empty-subtitle">
+            <img className="cart-list-empty-image" src={EmptyCart} alt="Empty cart" />
+            seus produtos selecionados aparecerão aqui
+          </h3>
+        </div>
       ) : (
         <>
           <section className="cart-list--items">
@@ -39,6 +51,11 @@ export default function CartList() {
                   {' '}
                   à vista
                 </dd>
+                <dd>
+                  Quantidade:
+                  {' '}
+                  {item.quantity}
+                </dd>
                 <ExcludeItemButton item={item} />
               </CartItemContainer>
             ))}
@@ -46,12 +63,22 @@ export default function CartList() {
           <div className="cart-list--subtotal">
             <strong>subtotal</strong>
             <hr />
-            <small>10x XXX,XX</small>
+            <small>
+              10x
+              {' '}
+              {installmentValueCurrency}
+            </small>
             <br />
-            <small>ou X.XXX,XX à vista</small>
+            <small>
+              ou
+              {' '}
+              {subtotalCurrency}
+              {' '}
+              à vista
+            </small>
           </div>
         </>
       )}
-    </CartListContainter>
+    </CartListContainer>
   );
 }

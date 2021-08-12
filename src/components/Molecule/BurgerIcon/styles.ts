@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HamburguerIconContainer = styled.div`
+export const BurgerIconContainer = styled.div`
   position: relative;
   top: -16px;
 
