@@ -14,7 +14,7 @@ export default function CartItem({ item }:ICartItemProps) {
   return (
     <CartItemContainer key={item.id}>
       <div className="cart-item--container">
-        <img className="cart-item--img" src={item.images[1]} alt={`${item.name}`} />
+        <img className="cart-item--img" src={item.images[0]} alt={`${item.name}`} />
         <div className="cart-item--description">
           <strong className="cart-item--title">
             {item.name}

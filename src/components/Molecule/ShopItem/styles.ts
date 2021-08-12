@@ -120,6 +120,13 @@ export const ShopItemContainer = styled.article`
     color: #fff;
     border: 0;
     outline: none;
+
+    transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+    &:hover{
+      filter: brightness(0.9);
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+    }
   }
 
   .shop-item--value{
