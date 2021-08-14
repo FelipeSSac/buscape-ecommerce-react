@@ -30,18 +30,18 @@ This project is based on the [buscape-company-front-end](https://github.com/busc
 
  Project developed using React library to make it an Single Page Application, which guarantee the best perform once its running directly in the clients browser, Create React App tool to configure the environment, TypeScript as the language to ensure values from props and states as the expected from contract, Redux as the global context state management, Styled components to avoid unnecessary style to components and conflicting ones, Atomic Design as the design pattern to promote clean maintenance and good practice of coding in accordance with ESLint and EditorConfig, configuration modules which automatically update the code to a pattern clean code.
 
- ## Project Architecture
+ ## 🔨 Project Architecture
 
  Project Architecture based on Atomic Design and SOLID principles.
 
  ```
  src
  ├──assets
- │   └──images
+ │   ├──images
  │   └──styles
  ├──components
- │   └──Atom
- │   └──Molecule
+ │   ├──Atom
+ │   ├──Molecule
  │   └──Organism
  ├──helpers
  ├──resources
@@ -50,7 +50,7 @@ This project is based on the [buscape-company-front-end](https://github.com/busc
      └──actions
  ```
 
- ## Components
+ ## 🧪 Components
 
  ```
  Component
@@ -59,7 +59,7 @@ This project is based on the [buscape-company-front-end](https://github.com/busc
   └──index.ts
  ```
 
- ## Redux
+ ## 🎆 Redux
 
  Redux was used to guarantee cart value on every component and to add and to remove items from cart.
  you can access the redux actions on folder `src/store/actions`.
