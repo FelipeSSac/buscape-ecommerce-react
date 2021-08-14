@@ -21,7 +21,7 @@ export default function CartList() {
       {cartListItems.length === 0 ? (
         <section className="cart-list__items">
           <div className="cart-list__empty-container">
-            <h1 className="cart-list-empty-title">
+            <h1>
               Seu carrinho ainda está vazio
             </h1>
             <h3 className="cart-list__empty-subtitle">

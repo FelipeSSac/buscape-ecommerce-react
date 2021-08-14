@@ -6,5 +6,6 @@ export type { IAction } from './actions/action';
 export type { IState, ICartItem } from './state';
 
 export { default as ShowCartItemsList } from './actions/ShowCartItemsList';
+export { default as HideCartItemsList } from './actions/HideCartItemsList';
 export { default as AddOnCart } from './actions/AddOnCart';
 export { default as RemoveFromCart } from './actions/RemoveFromCart';

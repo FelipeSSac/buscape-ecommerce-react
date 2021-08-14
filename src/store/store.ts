@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 
 import {
-  IState, IAction, ShowCartItemsList, AddOnCart, RemoveFromCart,
+  IState, IAction, ShowCartItemsList, HideCartItemsList, AddOnCart, RemoveFromCart,
 } from '.';
 
 const initialState: IState = {
@@ -13,6 +13,9 @@ const reducer = (state = initialState, action:IAction) => {
   switch (action.type) {
     case 'showCartItemsList': {
       return ShowCartItemsList(state);
+    }
+    case 'hideCartItemsList': {
+      return HideCartItemsList(state);
     }
     case 'addOnCart': {
       return AddOnCart(state, action);

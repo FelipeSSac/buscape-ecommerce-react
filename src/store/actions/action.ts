@@ -7,6 +7,7 @@ export interface IAction {
 
 export const ActionTypes = {
   showCartItemsList: 'showCartItemsList',
+  hideCartItemsList: 'hideCartItemsList',
   addOnCart: 'addOnCart',
   removeFromCart: 'removeFromCart',
 };
