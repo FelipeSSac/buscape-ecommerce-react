@@ -10,7 +10,7 @@ export const HeaderContainer = styled.header`
   background: #FFCE00;
   box-shadow: 0 -15px 20px;
 
-  .header--content{
+  .header__content{
     width: 90%;
     max-width: 78rem;
     height: 100%;
@@ -21,11 +21,7 @@ export const HeaderContainer = styled.header`
     align-items: center;
   }
 
-  .header--logo{
+  .header__logo{
     width: 6rem;
-  }
-
-  .header--drop-down-menu{
-    width: 48px;
   }
 `;

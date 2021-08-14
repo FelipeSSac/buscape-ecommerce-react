@@ -19,20 +19,20 @@ export default function CartList() {
       className={`${showList ? ('show-list') : ('hide-list')}`}
     >
       {cartListItems.length === 0 ? (
-        <section className="cart-list--items">
-          <div className="cart-list-empty-container">
+        <section className="cart-list__items">
+          <div className="cart-list__empty-container">
             <h1 className="cart-list-empty-title">
               Seu carrinho ainda está vazio
             </h1>
-            <h3 className="cart-list-empty-subtitle">
-              <img className="cart-list-empty-image" src={EmptyCart} alt="Empty cart" />
+            <h3 className="cart-list__empty-subtitle">
+              <img className="cart-list__empty-image" src={EmptyCart} alt="Empty cart" />
               seus produtos selecionados aparecerão aqui
             </h3>
           </div>
         </section>
       ) : (
         <>
-          <section className="cart-list--items">
+          <section className="cart-list__items">
             {cartListItems.map((item) => (
               <CartItem
                 key={item.id}
@@ -40,7 +40,7 @@ export default function CartList() {
               />
             ))}
           </section>
-          <div className="cart-list--subtotal">
+          <div className="cart-list__subtotal">
             <strong>subtotal</strong>
             <hr />
             <small>

@@ -21,31 +21,31 @@ export default function ShopItem({ item }:IShopItemProps) {
 
   return (
     <ShopItemContainer>
-      <div className="shop-item--galery">
+      <div className="shop-item__gallery">
         {images.map((image) => (
           <li key={image}>
             <img src={image} alt={name} />
           </li>
         ))}
       </div>
-      <img className="shop-item--main-image" src={images[0]} alt={name} />
-      <div className="shop-item--details-container">
-        <h1 className="shop-item--name">{name}</h1>
+      <img className="shop-item__main-image" src={images[0]} alt={name} />
+      <div className="shop-item__details-container">
+        <h1 className="shop-item__name">{name}</h1>
         <hr />
-        <h4 className="shop-item--best-price-tag">Melhor preço</h4>
-        <div className="shop-item--installments-container">
-          <h3 className="shop-item--installments">
+        <h4 className="shop-item__best-price-tag">Melhor preço</h4>
+        <div className="shop-item__installments-container">
+          <h3 className="shop-item__installments">
             {price.installments}
             x
             {' '}
           </h3>
-          <h3 className="shop-item--installments-value">
+          <h3 className="shop-item__installments-value">
             {EnsureCurrency(price.installmentValue)}
             {' '}
           </h3>
           <button
             type="button"
-            className="shop-item--button-add"
+            className="shop-item__button-add"
             onClick={() => handleCartAddItem(item)}
           >
             Adicionar ao carrinho
@@ -56,7 +56,7 @@ export default function ShopItem({ item }:IShopItemProps) {
             ou
             {' '}
           </span>
-          <h4 className="shop-item--value">{EnsureCurrency(price.value)}</h4>
+          <h4 className="shop-item__value">{EnsureCurrency(price.value)}</h4>
           <span>
             {' '}
             à vista

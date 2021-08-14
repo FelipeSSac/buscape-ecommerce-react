@@ -23,7 +23,7 @@ export const CartListContainer = styled.div`
     opacity: 1;
   }
 
-  .cart-list-empty-container{
+  .cart-list__empty-container{
     width: 100%;
     max-width: 80rem;
     margin: 10rem auto;
@@ -31,24 +31,24 @@ export const CartListContainer = styled.div`
     color: #fff;
     text-align: center;
 
-    .cart-list-empty-image{
+    .cart-list__empty-image{
       height: 4rem;
     }
 
-    .cart-list-empty-subtitle{
+    .cart-list__empty-subtitle{
       margin-top: 2rem;
       align-items: center;
     }
   }
 
-  .cart-list--items{
+  .cart-list__items{
     height: 100%;
     max-height: 39.4rem;
 
     overflow: auto;
   }
 
-  .cart-list--subtotal{
+  .cart-list__subtotal{
     padding: 2rem 3rem;
 
     text-align: right;

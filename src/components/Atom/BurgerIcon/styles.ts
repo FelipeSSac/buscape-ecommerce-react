@@ -9,7 +9,7 @@ export const BurgerIconContainer = styled.div`
   flex-direction: column;
   gap: 6px;
 
-  .items-count-indicator{
+  .items__count-indicator{
     position: relative;
     top: 42px;
     left: -6px;
@@ -41,15 +41,15 @@ export const BurgerIconContainer = styled.div`
     transition: all 0.2s ease-in-out;
   }
 
-  .show--icon-line-1{
+  .show-icon-line--1{
     transform: translate(0, 12px) rotateZ(-45deg);
   }
 
-  .show--icon-line-2{
+  .show-icon-line--2{
     opacity: 0;
   }
 
-  .show--icon-line-3{
+  .show-icon-line--3{
     transform: translate(0, -12px) rotateZ(45deg);
   }
 `;

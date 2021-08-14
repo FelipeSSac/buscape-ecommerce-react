@@ -30,11 +30,11 @@ export const ExcludeButtonContainer = styled.button`
     background: #000;
   }
 
-  .exclude-bar-1{
+  .exclude-bar--1{
     transform: translate(0, 7px) rotateZ(-45deg);
   }
 
-  .exclude-bar-2{
+  .exclude-bar--2{
     transform: translate(0, -7px) rotateZ(45deg);
   }
 `;

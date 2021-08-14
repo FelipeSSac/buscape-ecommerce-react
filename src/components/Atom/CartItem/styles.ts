@@ -11,7 +11,7 @@ export const CartItemContainer = styled.article`
 
   background: #CBA300;
 
-  .cart-item--container{
+  .cart-item__container{
     height: 8rem;
     width: 29rem;
 
@@ -20,7 +20,13 @@ export const CartItemContainer = styled.article`
     align-items: center;
   }
 
-  .cart-item--description{
+  .cart-item__img {
+    width: 7rem;
+
+    border: 1px solid #000;
+  }
+
+  .cart-item__description{
     height: 90%;
 
     display: flex;
@@ -28,27 +34,13 @@ export const CartItemContainer = styled.article`
     justify-content: space-between;
   }
 
-  .cart-item--img {
-    width: 7rem;
-
-    border: 1px solid #000;
-  }
-
-  .cart-item--title{
+  .cart-item__title{
     width: 20rem;
 
     color: #fff;
   }
 
-  .cart-item--installments{
-    font-weight: bold;
-  }
-
-  .cart-item--value{
-    font-weight: bold;
-  }
-
-  .cart-item--quantity{
+  .cart-item__value{
     font-weight: bold;
   }
 `;

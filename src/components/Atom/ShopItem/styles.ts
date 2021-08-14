@@ -14,7 +14,7 @@ export const ShopItemContainer = styled.article`
   border-radius: 0.2rem;
   box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1);
 
-  .shop-item--galery{
+  .shop-item__gallery{
     width: 4rem;
     height: 20rem;
     z-index: 1;
@@ -40,17 +40,11 @@ export const ShopItemContainer = styled.article`
     }
   }
 
-  .shop-item--main-image{
+  .shop-item__main-image{
     width: 25rem;
   }
 
-  .shop-item--name{
-    color: #333;
-    font-size: 2rem;
-    font-weight: lighter;
-  }
-
-  .shop-item--details-container{
+  .shop-item__details-container{
     width: 35rem;
     height: 25rem;
 
@@ -59,7 +53,13 @@ export const ShopItemContainer = styled.article`
     justify-content: center;
   }
 
-  .shop-item--best-price-tag{
+  .shop-item__name{
+    color: #333;
+    font-size: 2rem;
+    font-weight: lighter;
+  }
+
+  .shop-item__best-price-tag{
     width: 10rem;
     height: 1.3rem;
     margin-top: 1rem;
@@ -89,25 +89,25 @@ export const ShopItemContainer = styled.article`
     }
   }
 
-  .shop-item--installments-container{
+  .shop-item__installments-container{
     margin-top: 3rem;
   }
 
-  .shop-item--installments{
+  .shop-item__installments{
     display: inline;
 
     color: #11B346;
     font-size: 1.5rem;
   }
 
-  .shop-item--installments-value{
+  .shop-item__installments-value{
     display: inline;
 
     color: #11B346;
     font-size: 2rem;
   }
 
-  .shop-item--button-add{
+  .shop-item__button-add{
     width: 12rem;
     height: 2.5rem;
 
@@ -129,30 +129,24 @@ export const ShopItemContainer = styled.article`
     }
   }
 
-  .shop-item--value{
+  .shop-item__value{
     display: inline;
 
     color: #11B346;
   }
 
   @media (min-width:691px) and (max-width:1141px){
-    .shop-item--main-image{
+    .shop-item__main-image{
       width: 17rem;
     }
   }
 
-  /* @media (min-width:691px) and (max-width:999px){
-    .shop-item--main-image{
-      width: 14rem;
-    }
-  } */
-
   @media (max-width:690px){
-    .shop-item--galery{
+    .shop-item__gallery{
       display: none;
     }
 
-    .shop-item--main-image{
+    .shop-item__main-image{
       width: 12rem;
     }
   }

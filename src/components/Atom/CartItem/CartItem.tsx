@@ -13,13 +13,13 @@ interface ICartItemProps {
 export default function CartItem({ item }:ICartItemProps) {
   return (
     <CartItemContainer key={item.id}>
-      <div className="cart-item--container">
-        <img className="cart-item--img" src={item.images[0]} alt={`${item.name}`} />
-        <div className="cart-item--description">
-          <strong className="cart-item--title">
+      <div className="cart-item__container">
+        <img className="cart-item__img" src={item.images[0]} alt={`${item.name}`} />
+        <div className="cart-item__description">
+          <strong className="cart-item__title">
             {item.name}
           </strong>
-          <div className="cart-item--value">
+          <div className="cart-item__value">
             <dd>
               Quantidade:
               {' '}
