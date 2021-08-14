@@ -1,6 +1,6 @@
 import { Header } from '../Header';
 
-import { CartList } from '../../Organism/CartList';
+import { CartList } from '../../Molecule/CartList';
 import { ShopList } from '../ShopList';
 
 export default function Layout() {

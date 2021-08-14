@@ -1,4 +1,4 @@
-import { CartButton } from '../../Organism/CartButton';
+import { CartButton } from '../../Molecule/CartButton';
 
 import Logo from '../../../assets/images/logo.png';
 

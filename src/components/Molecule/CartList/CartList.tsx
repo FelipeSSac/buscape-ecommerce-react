@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { IState } from '../../../store';
 
-import { CartItem } from '../../Molecule/CartItem';
+import { CartItem } from '../../Atom/CartItem';
 
 import { CartListContainer } from './styles';
 import EmptyCart from '../../../assets/images/empty-cart.svg';

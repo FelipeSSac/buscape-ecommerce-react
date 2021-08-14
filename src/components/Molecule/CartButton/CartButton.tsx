@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { ActionTypes } from '../../../store';
 
-import { BurgerIcon } from '../../Molecule/BurgerIcon';
+import { BurgerIcon } from '../../Atom/BurgerIcon';
 
 import { CartButtonContainer } from './styles';
 

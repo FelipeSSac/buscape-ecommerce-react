@@ -1,4 +1,4 @@
-import { ShopItem } from '../../Molecule/ShopItem';
+import { ShopItem } from '../../Atom/ShopItem';
 
 import data from '../../../resources/Items/Items.json';
 
