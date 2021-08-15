@@ -28,7 +28,7 @@ This project is based on the [buscape-company-front-end](https://github.com/busc
 
 ## 🔧 Technologies choice
 
- Project developed using React library to make it an Single Page Application, which guarantee the best perform once its running directly in the clients browser, Create React App tool to configure the environment, TypeScript as the language to ensure values from props and states as the expected from contract, Redux as the global context state management, Styled components to avoid unnecessary style to components and conflicting ones, Atomic Design as the design pattern to promote clean maintenance and good practice of coding in accordance with ESLint and EditorConfig, configuration modules which automatically update the code to a pattern clean code.
+Project developed using the React library to make it a Single Page Application, which guarantees the best performance when running directly in the client's browser, Create React Application tool to configure the environment, TypeScript as the language to guarantee props and state values accordingly as expected from the contract, Redux as the global context state management, Styled Components to avoid unnecessary and conflicting component styles, Atomic Design as the design pattern to promote clean maintenance and good coding practices according to ESLint and EditorConfig.
 
  ## 🔨 Project Architecture
 
