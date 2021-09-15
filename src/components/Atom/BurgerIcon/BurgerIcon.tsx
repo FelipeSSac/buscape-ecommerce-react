@@ -11,7 +11,12 @@ export default function BurgerIcon() {
 
   return (
     <BurgerIconContainer>
-      <span className={`items__count-indicator${!cartItemsCount ? ' empty-cart' : ''}`}>{cartItemsCount}</span>
+      <span
+        data-testid="burger-icon__cart-counter"
+        className={`items__count-indicator${!cartItemsCount ? ' empty-cart' : ''}`}
+      >
+        {cartItemsCount}
+      </span>
       <span className={`icon-line${show ? ' show-icon-line--1' : ''}`} />
       <span className={`icon-line${show ? ' show-icon-line--2' : ''}`} />
       <span className={`icon-line${show ? ' show-icon-line--3' : ''}`} />

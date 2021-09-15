@@ -15,7 +15,10 @@ export default function ExcludeItemButton({ item }:IExcludeItemButtonProps) {
   };
 
   return (
-    <ExcludeButtonContainer onClick={() => handleCartRemoveItem(item)}>
+    <ExcludeButtonContainer
+      data-testid="cart-item__exclude-button"
+      onClick={() => handleCartRemoveItem(item)}
+    >
       <span className="exclude-bar exclude-bar--1" />
       <span className="exclude-bar exclude-bar--2" />
     </ExcludeButtonContainer>

@@ -4,12 +4,12 @@ import {
   IState, IAction, ShowCartItemsList, HideCartItemsList, AddOnCart, RemoveFromCart,
 } from '.';
 
-const initialState: IState = {
+export const initialState: IState = {
   cartItems: [],
   showCartItemsList: false,
 };
 
-const reducer = (state = initialState, action:IAction) => {
+export const reducer = (state = initialState, action:IAction) => {
   switch (action.type) {
     case 'showCartItemsList': {
       return ShowCartItemsList(state);

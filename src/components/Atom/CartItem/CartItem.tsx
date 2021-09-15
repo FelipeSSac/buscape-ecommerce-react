@@ -20,7 +20,7 @@ export default function CartItem({ item }:ICartItemProps) {
             {item.name}
           </strong>
           <div className="cart-item__value">
-            <dd>
+            <dd data-testid="cart-item-quantity">
               Quantidade:
               {' '}
               {item.quantity}

@@ -13,7 +13,7 @@ export default function CartButton() {
   };
 
   return (
-    <CartButtonContainer onClick={handleShowMenu}>
+    <CartButtonContainer data-testid="cart-button" onClick={handleShowMenu}>
       <BurgerIcon />
     </CartButtonContainer>
   );

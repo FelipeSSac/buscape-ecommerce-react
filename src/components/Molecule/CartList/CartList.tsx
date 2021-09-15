@@ -16,6 +16,7 @@ export default function CartList() {
 
   return (
     <CartListContainer
+      data-testid="cart-list-container"
       className={`${showList ? ('show-list') : ('hide-list')}`}
     >
       {cartListItems.length === 0 ? (

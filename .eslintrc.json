@@ -28,6 +28,8 @@
       "import/extensions": "off",
       "import/prefer-default-export": "off",
       "no-use-before-define": "off",
-      "react/require-default-props": "off"
+      "react/require-default-props": "off",
+      "no-undef": "off",
+      "import/no-extraneous-dependencies": "off"
     }
 }

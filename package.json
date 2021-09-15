@@ -17,6 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "coverage": "yarn test -- --coverage --colors",
     "eject": "react-scripts eject"
   },
   "browserslist": {
