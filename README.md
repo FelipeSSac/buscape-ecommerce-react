@@ -72,7 +72,7 @@ Project developed using the React library to make it a Single Page Application, 
 
  Unit tests coverage was higher than 80%
 
- <h1 align="center"><img src="./src/assets/images/coverage.png" /></h1>
+ <h1 align="center"><img src="./src/assets/images/testscoverage.png" /></h1>
 
 ## 🚀 How to run
 
