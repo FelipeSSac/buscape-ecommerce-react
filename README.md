@@ -12,6 +12,8 @@ This project was developed using the following technologies:
 - [TypeScript](https://www.typescriptlang.org/)
 - [Redux](https://react-redux.js.org/)
 - [Styled-components](https://www.styled-components.com/)
+- [Testing Library](https://testing-library.com/)
+- [Jest](https://jestjs.io/pt-BR/)
 - [ESLint](https://eslint.org/)
 - [EditorConfig](https://editorconfig.org/)
 
@@ -28,7 +30,7 @@ This project is based on the [buscape-company-front-end](https://github.com/busc
 
 ## 🔧 Technologies choice
 
-Project developed using the React library to make it a Single Page Application, which guarantees the best performance when running directly in the client's browser, Create React Application tool to configure the environment, TypeScript as the language to guarantee props and state values accordingly as expected from the contract, Redux as the global context state management, Styled Components to avoid unnecessary and conflicting component styles, Atomic Design as the design pattern to promote clean maintenance and good coding practices according to ESLint and EditorConfig.
+Project developed using the React library to make it a Single Page Application, which guarantees the best performance when running directly in the client's browser, Create React Application tool to configure the environment, TypeScript as the language to guarantee props and state values accordingly as expected from the contract, Redux as the global context state management, Styled Components to avoid unnecessary and conflicting component styles, Testing Library and Jest for testing to ensure quality assurance on components and events, Atomic Design as the design pattern to promote clean maintenance and good coding practices according to ESLint and EditorConfig.
 
  ## 🔨 Project Architecture
 
@@ -46,8 +48,9 @@ Project developed using the React library to make it a Single Page Application, 
  ├──helpers
  ├──resources
  │   └──items
- └──store
-     └──actions
+ ├──store
+ │   └──actions
+ └──utils
  ```
 
  ## 🧪 Components
@@ -55,6 +58,7 @@ Project developed using the React library to make it a Single Page Application, 
  ```
  Component
   ├──Component.tsx
+  ├──Component.test.tsx
   ├──styles.ts
   └──index.ts
  ```
@@ -63,6 +67,12 @@ Project developed using the React library to make it a Single Page Application, 
 
  Redux was used to guarantee cart value on every component and to add and to remove items from cart.
  you can access the redux actions on folder `src/store/actions`.
+
+ ## 👷‍♀️ Tests
+
+ Unit tests coverage was higher than 80%
+
+ <h1 align="center"><img src="./src/assets/images/coverage.png" /></h1>
 
 ## 🚀 How to run
 
@@ -73,6 +83,20 @@ $ yarn
 
 # Run to start the project on `localhost:3000`.
 $ yarn start
+```
+
+## 💣 How to test
+
+Clone this repository.
+```bash
+# Run to install dependencies.
+$ yarn
+
+# Run to test all suited tests.
+$ yarn test
+
+# Run to test all suited tests and get their coverage.
+$ yarn coverage
 ```
 
 ## 🚧 How to build
